@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: tek.sdet.framework.runner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 39.971 s <<< FAILURE! - in tek.sdet.framework.runner.TestRunner
+Retail Application Account Feature.Verify User can update Profile Information  Time elapsed: 8.91 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'user click on Account option' is undefined.
+You can implement this step using the snippet(s) below:
+
+@When("user click on Account option")
+public void userClickOnAccountOption() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
