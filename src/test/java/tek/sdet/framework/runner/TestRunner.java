@@ -8,7 +8,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		tags = "@smokeTest",
+		tags = "@SigningInTest",
 		features = ("classpath:features"),
 		glue = "tek.sdet.framework",
 		dryRun =false,    // set this to true for dryRun steps and after copy make it false again

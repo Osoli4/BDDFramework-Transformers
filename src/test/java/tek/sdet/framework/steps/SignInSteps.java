@@ -10,6 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
+import tek.sdet.framework.utilities.DataGeneratorUtility;
 
 public class SignInSteps extends CommonUtility{ // this is step defination 1 then go to signin.feature
 	                                                                              // below code comes from dryrun
@@ -47,6 +48,8 @@ public class SignInSteps extends CommonUtility{ // this is step defination 1 the
 		List<Map<String, String>> signUpInformation = dataTable.asMaps(String.class, String.class);
 		sendText(factory.signInPage().signUpNameField, signUpInformation.get(0).get("name"));
 		sendText(factory.signInPage().signUpEmailField, signUpInformation.get(0).get("email"));
+		sendText(factory.signInPage().signUpEmailField,DataGeneratorUtility.data (signUpInformation.get(0).get("name")));
+		sendText(factory.signInPage().signUpEmailField,DataGeneratorUtility.data (signUpInformation.get(0).get("email")));
 		sendText(factory.signInPage().signUpPasswordField, signUpInformation.get(0).get("password"));
 		sendText(factory.signInPage().signUpConfirmPasswordField, signUpInformation.get(0).get("confirmPassword"));
 		logger.info("user filled the signUp information form");
